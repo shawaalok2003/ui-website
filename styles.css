@@ -1,5 +1,4 @@
-/* General body style */
-body {
+\body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -74,14 +73,13 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 40px;
-    overflow: hidden;
     padding-top: 80px; /* Adjust for fixed navbar */
 }
 
-/* Left div with gradient text and higher z-index */
+/* Left div with gradient text */
 .content {
     position: relative;
-    z-index: 2; /* Higher z-index for content to stay above the image */
+    z-index: 2; /* Higher z-index for content */
     max-width: 600px;
 }
 
@@ -119,7 +117,7 @@ button:nth-child(2) {
     background-color: #00C853;
 }
 
-/* Right div with image and lower z-index */
+/* Right div with image */
 .image-container {
     position: absolute;
     right: 0;
@@ -132,23 +130,21 @@ button:nth-child(2) {
     overflow: hidden;
 }
 
-/* Image styling */
 .image-container img {
-    width: 100%; /* Adjust this based on image size */
+    width: 100%;
     max-width: 550px; /* Limiting the max width */
     height: auto;
-    opacity: 0.9; /* Slight opacity effect */
-    filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.1)); /* Adding a subtle shadow effect */
+    opacity: 0.9; /* Slight opacity */
+    filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.1)); /* Subtle shadow */
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* Hover effect for the image */
 .image-container img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    opacity: 1; /* Full opacity on hover */
+    transform: scale(1.05); /* Slight zoom */
+    opacity: 1; /* Full opacity */
 }
 
-/* Adding a gradient background to the left content area */
+/* Gradient background for content */
 .content::before {
     content: "";
     position: absolute;
@@ -165,7 +161,7 @@ button:nth-child(2) {
 /* Section Styling */
 .training-section {
     padding: 50px 0;
-    text-align: center; /* Center-aligns all text within the section */
+    text-align: center; /* Center-align text */
 }
 
 .container {
@@ -190,7 +186,7 @@ button:nth-child(2) {
 /* Cards Container */
 .cards-wrapper {
     display: flex;
-    justify-content: center; /* Centers the cards in the container */
+    justify-content: center; /* Center cards */
     gap: 20px;
 }
 
@@ -202,12 +198,11 @@ button:nth-child(2) {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     flex: 1;
     min-width: 250px;
-    max-width: 300px; /* Optional: Set a max-width for better visual balance */
+    max-width: 300px; /* Max-width for balance */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Icon inside cards */
 .card .icon img {
     width: 50px;
     height: 50px;
@@ -259,6 +254,7 @@ button:nth-child(2) {
     background-color: #fdebf2;
 }
 
+/* Programs Container */
 .programs-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -266,7 +262,9 @@ button:nth-child(2) {
     max-width: 1200px;
 }
 
-.college-programs, .training-center-programs, .all-programs {
+.college-programs,
+.training-center-programs,
+.all-programs {
     background-color: #eafaf1;
     border-radius: 10px;
     padding: 20px;
@@ -304,7 +302,9 @@ li {
     height: auto;
 }
 
-.view-more-btn, .view-all-btn {
+/* Button styles */
+.view-more-btn,
+.view-all-btn {
     background-color: #3da774;
     color: #fff;
     border: none;
@@ -317,7 +317,8 @@ li {
     right: 20px;
 }
 
-.view-more-btn:hover, .view-all-btn:hover {
+.view-more-btn:hover,
+.view-all-btn:hover {
     background-color: #2e8a5c;
 }
 
@@ -339,4 +340,55 @@ li {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+/* Layout for programs */
+.programs-container {
+    display: flex; /* Use flexbox for layout */
+    margin: 20px; /* Space around the container */
+    background-color: #82e7ac;
+}
+
+.large-program {
+    flex: 2; /* Takes twice the space of the smaller divs */
+    background-color: #f9f9f9; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the div */
+    background-color: #32f583;
+    margin-right: 20px; /* Space between sections */
+}
+
+.small-program {
+    flex: 1; /* Smaller divs take less space */
+    background-color: #eafaf1; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the div */
+    background-color: #63f19e;
+}
+
+/* General program styles */
+.program-title {
+    font-size: 20px; /* Larger font for titles */
+    color: #28A745; /* Green color */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.program-description {
+    font-size: 14px; /* Smaller font for descriptions */
+    color: #555; /* Gray color */
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    color: #28A745;
 }
