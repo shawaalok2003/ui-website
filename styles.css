@@ -1,0 +1,342 @@
+/* General body style */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #F0F9F7;
+    height: 100vh;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #28A745;
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    font-size: 16px;
+    color: #444;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover, .navbar ul li a.active {
+    color: #28A745;
+}
+
+.navbar .sign-in-btn {
+    background: linear-gradient(90deg, #28A745, #00C853);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.navbar .sign-in-btn:hover {
+    background: linear-gradient(90deg, #00C853, #28A745);
+}
+
+/* Container holding both divs */
+.container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    overflow: hidden;
+    padding-top: 80px; /* Adjust for fixed navbar */
+}
+
+/* Left div with gradient text and higher z-index */
+.content {
+    position: relative;
+    z-index: 2; /* Higher z-index for content to stay above the image */
+    max-width: 600px;
+}
+
+.content h1 {
+    font-size: 48px;
+    background: linear-gradient(90deg, #28A745, #00C853);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.content p {
+    font-size: 18px;
+    color: #444;
+    margin: 20px 0;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #28A745;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:nth-child(2) {
+    background-color: #00C853;
+}
+
+/* Right div with image and lower z-index */
+.image-container {
+    position: absolute;
+    right: 0;
+    z-index: 1; /* Lower z-index to be behind the content */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Image styling */
+.image-container img {
+    width: 100%; /* Adjust this based on image size */
+    max-width: 550px; /* Limiting the max width */
+    height: auto;
+    opacity: 0.9; /* Slight opacity effect */
+    filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.1)); /* Adding a subtle shadow effect */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Hover effect for the image */
+.image-container img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    opacity: 1; /* Full opacity on hover */
+}
+
+/* Adding a gradient background to the left content area */
+.content::before {
+    content: "";
+    position: absolute;
+    z-index: -1; /* Behind the text but above the image */
+    top: -100px;
+    left: -100px;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(102, 255, 142, 0.2), rgba(40, 167, 69, 0.6));
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+/* Section Styling */
+.training-section {
+    padding: 50px 0;
+    text-align: center; /* Center-aligns all text within the section */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Title and Subtitle */
+.section-title {
+    font-size: 2rem;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.5rem;
+    color: #212529;
+    margin-bottom: 40px;
+}
+
+/* Cards Container */
+.cards-wrapper {
+    display: flex;
+    justify-content: center; /* Centers the cards in the container */
+    gap: 20px;
+}
+
+/* Card Styling */
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px; /* Optional: Set a max-width for better visual balance */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Icon inside cards */
+.card .icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Headings */
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #343a40;
+}
+
+/* Card Text */
+.card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #6c757d;
+}
+
+/* Learn More Link */
+.card a {
+    text-decoration: none;
+    color: #28a745;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card a:hover {
+    color: #1e7e34;
+}
+
+/* Specific Card Colors */
+.ux-card {
+    background-color: #e0f7f5;
+}
+
+.java-card {
+    background-color: #eaf4fd;
+}
+
+.finance-card {
+    background-color: #fdebf2;
+}
+
+.programs-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+}
+
+.college-programs, .training-center-programs, .all-programs {
+    background-color: #eafaf1;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+h2 {
+    color: #3da774;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+li {
+    font-size: 14px;
+    color: #555;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.view-more-btn, .view-all-btn {
+    background-color: #3da774;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.view-more-btn:hover, .view-all-btn:hover {
+    background-color: #2e8a5c;
+}
+
+.all-programs {
+    grid-column: span 2;
+}
+
+.program-category {
+    margin-bottom: 20px;
+}
+
+.program-category h3 {
+    color: #3da774;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.program-category ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
