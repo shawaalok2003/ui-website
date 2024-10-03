@@ -805,6 +805,9 @@ h1 {
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
+    height: 760px;
+    width: 100%;
+    position: relative;
 }
 
 .program-card1 {
@@ -813,14 +816,14 @@ h1 {
     border-radius: 15px;
     padding: 20px;
     text-align: center;
-    position: relative;
-    width: 563.01px;
-height: 649.9px;
-left: 250px;
+    position: absolute;
+    width: 630px;
+height: 720px;
+left: 170px;
 gap: 0px;
 border-radius: 36.21px 0px 0px 0px;
 opacity: 0px;
-
+margin-left: 10px;
 }
 .program-card2 {
     background-color: #d6f2e3;
@@ -828,14 +831,17 @@ opacity: 0px;
     border-radius: 15px;
     padding: 20px;
     text-align: center;
-    position: relative;
-    left: 230px;
-    width: 350px;
+    position: absolute;
+    width: 510px;
     height: 350px;
+    border: 2px 0px 0px 0px;
     gap: 0px;
     opacity: 0px;
     angle: 90 deg;
-    
+    margin-right: 20px;
+    padding-bottom: 20px;
+    gap: 10px;
+    left: 830px;
 }
 
 .program-card3 {
@@ -843,16 +849,17 @@ opacity: 0px;
     border: 2px solid #00A366;
     border-radius: 15px;
     padding: 20px;
-    top: 350px;
+    top: 370px;
     text-align: center;
-    position: relative;
-    width: 350px;
-    height: 300px;
+    position: absolute;
+    width: 510px;
+    height: 350px;
     gap: 0px;
     border: 2px 0px 0px 0px;
     opacity: 0px;
-    left: -150px;
-    
+    left: 830px;
+    padding-top: 10px;
+    right: 20px;
 }
 
 .program-card h2 {
