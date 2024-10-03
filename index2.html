@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Navbar and Content</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./we.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" data-aos="fade-down">
+        <div class="logo">
+            <a href="#">YourLogo</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">FAQ's</a></li>
+        </ul>
+        <button class="sign-in-btn" onclick="redirectToLogin()">Sign in</button>
+    </nav>
+
+    <div class="container">
+        <!-- Left content with gradient text and higher z-index -->
+        <div class="content" data-aos="fade-left">
+            <h1>Bridging Upskilling & Employment</h1>
+            <p>Our goal is to lend a helping hand to those who have limited time to take care of the family's health due to their professional commitments, or because they just don't live close to their parents.</p>
+            <div class="buttons">
+                <button>Get Started</button>
+                <button>Get Free Trial</button>
+            </div>
+        </div>
+
+        <!-- Right image with lower z-index -->
+        <div class="image-container" data-aos="fade-right">
+            <img src="./images/Essential - study (PNG).png" alt="Person working at a desk">
+        </div>
+    </div>
+    
+    <section class="training-section" data-aos="fade-up">
+        <h2 class="section-title">Our Training Programs</h2>
+        <p class="section-subtitle">Fostering a playful & engaging learning environment</p>
+        <div class="container11">
+            <div class="cards-wrapper cardddwraper">
+                <!-- UX Experience Card -->
+                <div class="card ux-card carddd" data-aos="flip-left">
+                    <div class="icon">
+                        <img src="./images/Frame 390.png" alt="UX Icon">
+                    </div>
+                    <h3>UX Experience</h3>
+                    <p>Lessons on design that cover the most recent developments.</p>
+                    <a href="#">Learn More &rarr;</a>
+                </div>
+                <!-- Java Full-stack Card -->
+                <div class="card java-card carddd" data-aos="flip-left">
+                    <div class="icon">
+                        <img src="./images/Frame 391.png" alt="Java Icon">
+                    </div>
+                    <h3>Java Full-stack</h3>
+                    <p>Classes in development that cover the most advancements in web/app.</p>
+                    <a href="#">Learn More &rarr;</a>
+                </div>
+                <!-- Financial Analysis Card -->
+                <div class="card finance-card carddd" data-aos="flip-left">
+                    <div class="icon">
+                        <img src="./images/Frame 391 (1).png" alt="Finance Icon">
+                    </div>
+                    <h3>Financial Analysis</h3>
+                    <p>Courses that cover the most recent trends in financial analysis.</p>
+                    <a href="#">Learn More &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="programs-section" data-aos="fade-up">
+        <!-- College Programs Card -->
+        <div class="program-card1">
+            <h2>College Programs</h2>
+            <p>Workshops&nbsp;&nbsp;&nbsp;Trainings&nbsp;&nbsp;&nbsp;Pre-Internships&nbsp;&nbsp;&nbsp;Hirings</p>
+            <img src="./images/Essential - School buildings college (PNG).png" alt="College Programs Image" class="program-image">
+            <a href="#" class="view-more-btn">View more ➔</a>
+        </div>
+    
+        <!-- Training Center Programs Card -->
+        <div class="program-card2">
+            <h2>Training center Programs</h2>
+            <p>Project Involvement&nbsp;&nbsp;&nbsp;Business Analysis&nbsp;&nbsp;&nbsp;Comprehensive Trainings&nbsp;&nbsp;&nbsp;Post Internships</p>
+            <img src="./images/Essential - training (PNG).png" alt="Training Programs Image" class="program-image">
+            <a href="#" class="view-more-btn">View more ➔</a>
+        </div>
+    
+        <!-- All Programs Card -->
+        <div class="program-card3">
+            <h2>All Programs</h2>
+            <div class="program-list">
+                <div class="program-column">
+                    <h3>IT Training Program</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>Data Analyst</li>
+                        <li>Python</li>
+                        <li>DevOps</li>
+                    </ul>
+                </div>
+                <div class="program-column">
+                    <h3>Non-IT Training Program</h3>
+                    <ul>
+                        <li>User Experience (UX) Design</li>
+                        <li>Digital Marketing</li>
+                        <li>Project Management</li>
+                        <li>Customer Relationship Management</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="view-all-btn">View all ➔</a>
+        </div>
+    </div>
+
+    <div class="container1" data-aos="fade-up">
+        <!-- Card 1 -->
+        <div class="card1">
+            <div class="card1-image">
+                <img src="./images/Image (1).png" alt="Course Image">
+                <div class="duration1-badge">2 weeks</div>
+            </div>
+            <div class="card1-content">
+                <span class="category1">Design</span>
+                <h2 class="card1-title">Figma UI UX Design..</h2>
+                <p class="card1-description">Use Figma to get a job in UI Design, User Interface, User Experience design.</p>
+                <div class="card1-rating">
+                    <span>4.3</span>
+                    <span class="stars1">★★★★★</span>
+                </div>
+                <div class="author1-info">
+                    <img src="https://via.placeholder.com/40" alt="Author Image">
+                    <span>Jane Cooper</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Duplicate Card for Card 2 and 3 -->
+        <div class="card1">
+            <div class="card1-image">
+                <img src="./images/Image (2).png" alt="Course Image">
+                <div class="duration1-badge">2 weeks</div>
+            </div>
+            <div class="card1-content">
+                <span class="category1">Design</span>
+                <h2 class="card1-title">Figma UI UX Design..</h2>
+                <p class="card1-description">Use Figma to get a job in UI Design, User Interface, User Experience design.</p>
+                <div class="card1-rating">
+                    <span>4.3</span>
+                    <span class="stars1">★★★★★</span>
+                </div>
+                <div class="author1-info">
+                    <img src="https://via.placeholder.com/40" alt="Author Image">
+                    <span>Jane Cooper</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card1">
+            <div class="card1-image">
+                <img src="./images/Image (3).png" alt="Course Image">
+                <div class="duration1-badge">2 weeks</div>
+            </div>
+            <div class="card1-content">
+                <span class="category1">Design</span>
+                <h2 class="card1-title">Figma UI UX Design..</h2>
+                <p class="card1-description">Use Figma to get a job in UI Design, User Interface, User Experience design.</p>
+                <div class="card1-rating">
+                    <span>4.3</span>
+                    <span class="stars1">★★★★★</span>
+                </div>
+                <div class="author1-info">
+                    <img src="https://via.placeholder.com/40" alt="Author Image">
+                    <span>Jane Cooper</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="testimonials-section" data-aos="fade-up">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-wrapper">
+            <div class="testimonial-container">
+                <!-- Testimonial Cards -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://via.placeholder.com/100" alt="Customer Image">
+                    <h3>Customer 1</h3>
+                    <p>"Great experience! The courses helped me land my dream job."</p>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://via.placeholder.com/100" alt="Customer Image">
+                    <h3>Customer 2</h3>
+                    <p>"I learned so much and the instructors were fantastic!"</p>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://via.placeholder.com/100" alt="Customer Image">
+                    <h3>Customer 3</h3>
+                    <p>"Highly recommend! The training was very practical."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about-us" data-aos="fade-left">
+        <div class="content" data-aos="fade-left">
+            <h1>Who We Are</h1>
+            <blockquote>
+                <p>“Empowering Success Through Tailored Learning For A Competitive Edge.”</p>
+            </blockquote>
+            <p>
+                WITH is a strategic leader in professional development, specializing in Workshops, Internships, Trainings, and Hiring in India, and focusing on Training and IT Recruitment in the USA. Our mission is to create pathways that connect talent with opportunity, ensuring that individuals are not just prepared but excel in their careers.
+            </p>
+            <a href="#" class="join-btn">Join Us</a>
+        </div>
+    
+        <div class="images" data-aos="fade-right">
+            <img src="./images/Rectangle 13 (2).png" alt="Office Image" class="image-top">
+            <img src="./images/Rectangle 14 (1).png" alt="Working Hands" class="image-bottom">
+        </div>
+    </section>
+    
+    <section class="features" data-aos="fade-up">
+        <div class="container">
+            <div class="image-container" data-aos="fade-left">
+                <img src="./images/Essential - student (PNG).png" alt="Illustration of a person" class="illustration">
+            </div>
+            <div class="content" data-aos="fade-right">
+                <h3>Features</h3>
+                <h1>We are always working to provide you best of the features in all aspects.</h1>
+                <p class="description">
+                    Our mission is to empower individuals through tailored learning experiences that equip them with the skills and insights needed to thrive in a competitive job market. 
+                    We are committed to fostering an ecosystem where education meets industry demands, enabling a seamless transition from learning to employment.
+                </p>
+                <p class="description">
+                    We envision a future where every individual has access to quality training and career opportunities, regardless of their geographical location. By becoming a global hub 
+                    for professional growth, we aim to redefine how talent is developed and recruited, creating a workforce ready to meet the challenges of tomorrow.
+                </p>
+                <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq-container" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+            <button class="faq-question">What is the difference between a UI and UX Designer?</button>
+            <div class="faq-answer">
+                <p>UI refers to User Interface, focusing on visual design, while UX refers to User Experience, focusing on usability and the user's journey.</p>
+            </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+            <button class="faq-question">How to become a UI designer?</button>
+            <div class="faq-answer">
+                <p>You can become a UI designer by learning design principles, practicing with design tools like Figma, and building a portfolio.</p>
+            </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+            <button class="faq-question">What is the best UI design tool?</button>
+            <div class="faq-answer">
+                <p>Popular UI design tools include Figma, Sketch, and Adobe XD.</p>
+            </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+            <button class="faq-question">What is the best place to learn Figma?</button>
+            <div class="faq-answer">
+                <p>You can learn Figma from resources like the official Figma website, YouTube tutorials, and design courses on platforms like Udemy.</p>
+            </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+            <button class="faq-question">Should designers code?</button>
+            <div class="faq-answer">
+                <p>While not necessary, knowing basic coding (HTML, CSS, JavaScript) can help designers better understand how their designs will be implemented.</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="newsletter-container" data-aos="fade-up">
+        <h2>Newsletter</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget ac quis aliquam arcu lacus.</p>
+        <div class="input-container">
+            <input type="email" placeholder="Your email" required>
+            <button class="subscribe-btn">SUBSCRIBE</button>
+        </div>
+    </div>
+    
+    <footer class="footer" data-aos="fade-up">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="WEEKEND" class="logo-img">
+                    <p class="tagline">Top learning experiences that create more talent in the world.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Solutions</a></li>
+                            <li><a href="#">Tutorials</a></li>
+                            <li><a href="#">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press <span class="new">New</span></a></li>
+                            <li><a href="#">News</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Social</h4>
+                        <ul>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">Dribbble</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Cookies</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bottom Section -->
+            <div class="footer-bottom">
+                <p>© 2022 Ed-Circle. All rights reserved.</p>
+                <div class="footer-social-icons">
+                    <a href="#"><img src="twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="github.png" alt="GitHub"></a>
+                    <a href="#"><img src="dribbble.png" alt="Dribbble"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  <script>
+    function redirectToLogin() {
+        window.location.href = "login.html";  // Redirect to the login page
+    }
+    // Create the torch and dark effect elements dynamically
+
+</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // duration of animations in milliseconds
+            once: false// whether animation should happen only once
+        });
+    </script>
+</body>
+</html>
