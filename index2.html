@@ -367,6 +367,21 @@
             duration: 800, // duration of animations in milliseconds
             once: false// whether animation should happen only once
         });
+        document.body.addEventListener('mouseleave', function () {
+            torch.style.display = 'none';
+        });
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+          // Show the torch when the mouse moves
+    document.addEventListener('mousemove', function (e) {
+        torch.style.display = 'block';
+        torch.style.top = `${e.pageY - 100}px`;
+        torch.style.left = `${e.pageX - 100}px`;
+    });
     </script>
 </body>
 </html>
