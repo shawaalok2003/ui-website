@@ -617,8 +617,8 @@ h3 {
  
 .features {
     background-color: #ffffff;
-    padding: 50px;
-    max-width: 1200px;
+    padding: 100px;
+    width: 1000px;
     margin: 0 auto;
     border-radius: 8px;
     display: flex;
@@ -1218,8 +1218,8 @@ input[type="email"] {
     justify-content: space-between;
     align-items: flex-start;
     width: 1000px;
-    padding: 50px;
     margin: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .content {
