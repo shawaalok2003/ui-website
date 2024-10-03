@@ -1206,3 +1206,62 @@ input[type="email"] {
     font-size: 0.95rem;
     color: #f0fff0; /* Very light greenish-white */
   }
+  .about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1000px;
+    padding: 50px;
+    margin: 200px;
+}
+
+.content {
+    max-width: 50%;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #10914f;
+    margin-bottom: 20px;
+}
+
+blockquote p {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.join-btn {
+    background-color: #10914f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.images img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.image-top {
+    max-width: 350px;
+}
+
+.image-bottom {
+    max-width: 250px;
+}
