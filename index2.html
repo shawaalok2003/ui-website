@@ -21,6 +21,7 @@
             <li><a href="#">Programs</a></li>
             <li><a href="#">Contact us</a></li>
             <li><a href="#">FAQ's</a></li>
+            <li><a href="./enquiry.html">Contact Us</a></li>
         </ul>
         <button class="sign-in-btn" onclick="redirectToLogin()">Sign in</button>
     </nav>
@@ -35,10 +36,26 @@
                 <button>Get Free Trial</button>
             </div>
         </div>
-
+    
         <!-- Right image with lower z-index -->
-        <div class="image-container" data-aos="fade-right">
-            <img src="./images/Essential - study (PNG).png" alt="Person working at a desk">
+    
+        <!-- Enquiry Form -->
+        <div class="form-container" data-aos="fade-up">
+            <h2>Enquiry Form</h2>
+            <form action="/submit_enquiry" method="post">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="tel" id="contact" name="contact" placeholder="Contact Number" required>
+                <select id="topic" name="topic" required>
+                    <option value="" disabled selected>Select a Topic</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Product Information">Product Information</option>
+                    <option value="Support">Support</option>
+                    <option value="Other">Other</option>
+                </select>
+                <textarea id="message" name="message" rows="3" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
         </div>
     </div>
     
@@ -186,29 +203,45 @@
         </div>
     </div>
 
-    <section class="testimonials-section" data-aos="fade-up">
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Testimonials</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="testimonials-section">
         <h2>What Our Customers Say</h2>
         <div class="testimonial-wrapper">
-            <div class="testimonial-container">
-                <!-- Testimonial Cards -->
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://via.placeholder.com/100" alt="Customer Image">
-                    <h3>Customer 1</h3>
-                    <p>"Great experience! The courses helped me land my dream job."</p>
-                </div>
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://via.placeholder.com/100" alt="Customer Image">
-                    <h3>Customer 2</h3>
-                    <p>"I learned so much and the instructors were fantastic!"</p>
-                </div>
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://via.placeholder.com/100" alt="Customer Image">
-                    <h3>Customer 3</h3>
-                    <p>"Highly recommend! The training was very practical."</p>
-                </div>
+          <div class="testimonial-container">
+            <!-- Testimonial Cards -->
+            <div class="testimonial-card leftt">
+              <img src="https://via.placeholder.com/100" alt="Customer Image">
+              <h3>Customer 1</h3>
+              <p class="position">Data Analyst</p>
+              <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus auctor orci sit amet libero facilisis, sit amet dapibus eros scelerisque.</p>
             </div>
+            <div class="testimonial-card middleee">
+              <img src="https://via.placeholder.com/100" alt="Customer Image">
+              <h3>Customer 2</h3>
+              <p class="position">Software Engineer</p>
+              <p class="testimonial-text">Suspendisse potenti. Praesent nec erat sed orci aliquam tincidunt. Fusce non dignissim nunc. Integer at pharetra urna, vel convallis justo.</p>
+            </div>
+            <div class="testimonial-card leftt">
+              <img src="https://via.placeholder.com/100" alt="Customer Image">
+              <h3>Customer 3</h3>
+              <p class="position">Marketing Specialist</p>
+              <p class="testimonial-text">Vestibulum eget purus sit amet metus tincidunt sollicitudin. Morbi vel justo felis. Integer auctor lorem et magna tempor, ac tincidunt ex.</p>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+
+
     
     <section class="about-us" data-aos="fade-left">
         <div class="content" data-aos="fade-left">
