@@ -4,10 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enquiry Form</title>
-    <link rel="stylesheet" href="enquiry.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f4037, #99f2c8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            display: flex;
+            max-width: 900px;
+            width: 90%;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Left side image */
+        .form-image {
+            width: 50%;/* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Right side form */
+        .form-content {
+            width: 50%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+        
+
+        @media (max-width: 768px) {
+            .form-container {
+                flex-direction: column;
+            }
+
+            .form-image, .form-content {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="form-container">
+        <div class="form-image"">
+            <img src="./images/Essential - study (PNG).png" style="width: 500px; padding:50px;">
+        </div>
+
+        <!-- Right side form -->
         <div class="form-content">
             <h1>Enquiry Form</h1>
             <form action="/submit_enquiry" method="post">
@@ -32,9 +126,32 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
 
-                <button type="submit">Submit</button>
+                <button type="submit" style="margin-left:125px">Submit</button >
             </form>
         </div>
     </div>
+
+    <script>
+        // JavaScript to show the modal on page load
+        window.onload = function () {
+            const modal = document.getElementById("modal");
+            const closeBtn = document.getElementById("close-btn");
+
+            // Display the modal
+            modal.classList.add("active");
+
+            // Close modal on close button click
+            closeBtn.onclick = function () {
+                modal.classList.remove("active");
+            };
+
+            // Close modal on clicking outside of the modal content
+            window.onclick = function (event) {
+                if (event.target === modal) {
+                    modal.classList.remove("active");
+                }
+            };
+        };
+    </script>
 </body>
 </html>
