@@ -6,13 +6,14 @@
     <title>Gradient Navbar and Content</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="./we.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar" data-aos="fade-down">
         <div class="logo">
-            <a href="#">YourLogo</a>
+            <img src="./images/WhatsApp_Image_2024-09-24_at_16.58.07-removebg-preview.png" style="width: 150px; height:50px; padding:0px">
         </div>
         <ul class="nav-links">
             <li><a href="#" class="active">Home</a></li>
@@ -20,33 +21,161 @@
             <li><a href="#">Programs</a></li>
             <li><a href="#">Contact us</a></li>
             <li><a href="#">FAQ's</a></li>
+            <li><a href="./enquiry.html">Contact Us</a></li>
         </ul>
         <button class="sign-in-btn" onclick="redirectToLogin()">Sign in</button>
     </nav>
+    <style>
+        .popup-form {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            background: transparent; /* Semi-transparent dark background */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Higher z-index to appear above other elements */
+        }
+        
+        .popup-form.active {
+            display: flex; /* Show the form when active */
+        }
+        
+        /* Blurred background effect */
+        body.blur {
+            filter: (); /* Apply blur effect to the body */
+            transition: filter 1s ease; /* Smooth transition for blur */
+        }
+        
+        .popup-content {
+            background-color: white; /* White background for the form */
+            border-radius: 8px; /* Rounded corners */
+            padding: 50px; /* Increased padding for a spacious feel */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+            max-width: 400px; /* Maximum width of the form */
+            width: 90%; /* Full width on smaller screens */
+            position: relative; /* For positioning close button */
+            background-color: #caf4b7;
+            padding-right: 80px;
+        }
+        
+        .popup-content h2 {
+            margin-bottom: 20px; /* More space below the header */
+            font-size: 28px; /* Larger font size */
+            color: #333; /* Dark color for better readability */
+            text-align: center; /* Centered text */
+        }
+        
+        .popup-content label {
+            font-weight: bold; /* Bold labels for emphasis */
+            margin-bottom: 8px; /* More space below labels */
+            display: block; /* Labels on new lines */
+            margin-right: 20px;
+            color: #555; /* Softer color for labels */
+        }
+        
+        .popup-content input[type="text"],
+        .popup-content input[type="email"],
+        .popup-content textarea {
+            width: 100%; /* Full width inputs */
+            padding: 12px; /* More padding for comfort */
+            margin-bottom: 20px; /* Space below inputs */
+            border: 1px solid #ccc; /* Light border for inputs */
+            border-radius: 4px; /* Slightly rounded corners */
+            font-size: 16px; /* Larger font size for better readability */
+            transition: border-color 0.3s ease; /* Smooth transition for focus effect */
+            margin-right: 20px;
+        }
+        
+        .popup-content input[type="text"]:focus,
+        .popup-content input[type="email"]:focus,
+        .popup-content textarea:focus {
+            border-color: #28a745; /* Green border on focus */
+            outline: none; /* Remove default outline */
+        }
+        
+        .popup-content textarea {
+            resize: none; /* Disable resizing for consistency */
+        }
+        
+        .popup-content button.submit-btn {
+            background-color: #28a745; /* Green background for buttons */
+            color: white; /* White text color */
+            padding: 12px 20px; /* Increased padding for buttons */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners for buttons */
+            cursor: pointer; /* Pointer cursor for interactivity */
+            font-size: 18px; /* Larger font size for buttons */
+            transition: background-color 0.3s ease; /* Smooth transition for hover */
+            width: 100%; /* Full width button */
+            margin-left: 14.5px;
+        }
+        
+        .popup-content button.submit-btn:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+        
+        .close-enquiry-btn {
+            position: absolute;
+            top: 15px; /* Slightly lower position for aesthetic */
+            right: 20px; /* Spacing from right */
+            font-size: 28px; /* Larger font size for the close button */
+            cursor: pointer;
+            color: #555; /* Softer color for the close button */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+        
+        .close-enquiry-btn:hover {
+            color: #ff4d4d; /* Red color on hover for emphasis */
+        }
+    </style>
+    <div id="enquiryPopup" class="popup-form">
+        <div class="popup-content">
+            <span class="close-enquiry-btn">&times;</span>
+            <h2>Enquiry Form</h2>
+            <form action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
 
     <div class="container">
         <!-- Left content with gradient text and higher z-index -->
-        <div class="content">
+        <div class="content" data-aos="fade-left">
             <h1>Bridging Upskilling & Employment</h1>
             <p>Our goal is to lend a helping hand to those who have limited time to take care of the family's health due to their professional commitments, or because they just don't live close to their parents.</p>
             <div class="buttons">
                 <button>Get Started</button>
                 <button>Get Free Trial</button>
             </div>
+            
         </div>
-
+    
         <!-- Right image with lower z-index -->
         <div class="image-container">
             <img src="./images/Essential - study (PNG).png" alt="Person working at a desk">
         </div>
     </div>
-    <section class="training-section">
+    
+    <section class="training-section" data-aos="fade-up">
         <h2 class="section-title">Our Training Programs</h2>
-            <p class="section-subtitle">Fostering a playful & engaging learning environment</p>
+        <p class="section-subtitle">Fostering a playful & engaging learning environment</p>
         <div class="container11">
             <div class="cards-wrapper cardddwraper">
                 <!-- UX Experience Card -->
-                <div class="card ux-card carddd">
+                <div class="card ux-card carddd" data-aos="flip-left">
                     <div class="icon">
                         <img src="./images/Frame 390.png" alt="UX Icon">
                     </div>
@@ -55,7 +184,7 @@
                     <a href="#">Learn More &rarr;</a>
                 </div>
                 <!-- Java Full-stack Card -->
-                <div class="card java-card carddd">
+                <div class="card java-card carddd" data-aos="flip-left">
                     <div class="icon">
                         <img src="./images/Frame 391.png" alt="Java Icon">
                     </div>
@@ -63,8 +192,9 @@
                     <p>Classes in development that cover the most advancements in web/app.</p>
                     <a href="#">Learn More &rarr;</a>
                 </div>
+                
                 <!-- Financial Analysis Card -->
-                <div class="card finance-card carddd">
+                <div class="card finance-card carddd" data-aos="flip-left">
                     <div class="icon">
                         <img src="./images/Frame 391 (1).png" alt="Finance Icon">
                     </div>
@@ -75,124 +205,149 @@
             </div>
         </div>
     </section>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Programs</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="programs-section">
-            <!-- College Programs Card -->
-            <div class="program-card1">
-                <h2>College Programs</h2>
-                <p>Workshops&nbsp;&nbsp;&nbsp;Trainings&nbsp;&nbsp;&nbsp;Pre-Internships&nbsp;&nbsp;&nbsp;Hirings</p>
-                <img src="./images/Essential - School buildings college (PNG).png" alt="College Programs Image" class="program-image">
-                <a href="#" class="view-more-btn">View more ➔</a>
+
+    <div class="programs-section" data-aos="fade-up">
+        <!-- College Programs Card -->
+        <div class="program-card1">
+            <h2>College Programs</h2>
+            <!-- <div class="program-list">
+                <div class="program-column"> -->
+            <ul>
+                <li>Workshops</li>
+                <li>Trainings</li>
+                <li>Pre-Internships</li>
+                <li>Hirings</li>
+            </ul>
+            <!-- </div>
+            </div> -->
+            <img src="./images/Essential - School buildings college (PNG).png" alt="College Programs Image" class="program-image1">
+            <a href="#" class="view-more-btn">View more ➔</a>
+        </div>
+
+        <div class="program-card4">
+            <h2>Hiring Section</h2>
+            <div class="program-list">
+                <div class="program-column">
+            <ul>
+                <li>India  : Campus Hirings
+                </li>
+                <li>USA : US IT Recruitment</li>
+            </ul>
             </div>
-    
-            <!-- Training Center Programs Card -->
-            <div class="program-card2">
-                <h2>Training center Programs</h2>
-                <p>Project Involvement&nbsp;&nbsp;&nbsp;Business Analysis&nbsp;&nbsp;&nbsp;Comprehensive Trainings&nbsp;&nbsp;&nbsp;Post Internships</p>
-                <img src="./images/Essential - training (PNG).png" alt="Training Programs Image" class="program-image">
-                <a href="#" class="view-more-btn">View more ➔</a>
             </div>
+            <!-- <img src="./images/Essential - School buildings college (PNG).png" alt="College Programs Image" class="program-image"> -->
+            <a href="#" class="view-more-btn">View more ➔</a>
+        </div>
     
-            <!-- All Programs Card -->
-            <div class="program-card3">
-                <h2>All Programs</h2>
-                <div class="program-list">
-                    <div class="program-column">
-                        <h3>IT Training Program</h3>
-                        <ul>
-                            <li>Java</li>
-                            <li>Data Analyst</li>
-                            <li>Python</li>
-                            <li>DevOps</li>
-                        </ul>
-                    </div>
-                    <div class="program-column">
-                        <h3>Non-IT Training Program</h3>
-                        <ul>
-                            <li>User Experience (UX) Design</li>
-                            <li>Digital Marketing</li>
-                            <li>Project Management</li>
-                            <li>Customer Relationship Management</li>
-                        </ul>
-                    </div>
+        <!-- Training Center Programs Card -->
+        <div class="program-card2">
+            <h2>Training center Programs</h2>
+            <!-- <div class="program-list">
+                <div class="program-column"> -->
+            <ul>
+                <li>Project Involvement</li>
+                <li>Business Analysis</li>
+                <li>Comprehensive Trainings</li>
+                <li>Post Internships</li>
+            </ul>
+            <!-- </div>
+            </div> -->
+            <img src="./images/Essential - training (PNG).png" alt="Training Programs Image" class="program-image">
+            <a href="#" class="view-more-btn">View more ➔</a>
+        </div>
+    
+        <!-- All Programs Card -->
+        <div class="program-card3">
+            <h2>All Programs</h2>
+            <div class="program-list">
+                <div class="program-column">
+                    <h3>IT Training Program</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>Data Analyst</li>
+                        <li>Python</li>
+                        <li>DevOps</li>
+                    </ul>
                 </div>
-                <a href="#" class="view-all-btn">View all ➔</a>
+                <div class="program-column">
+                    <h3>Non-IT Training Program</h3>
+                    <ul>
+                        <li>User Experience (UX) Design</li>
+                        <li>Digital Marketing</li>
+                        <li>Project Management</li>
+                        <li>Customer Relationship Management</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="view-all-btn">View all ➔</a>
+        </div>
+    </div>
+
+    <div class="container1" data-aos="fade-up">
+        <!-- Card 1 -->
+        <div class="card1">
+            <div class="card1-image">
+                <img src="./images/Image (1).png" alt="Course Image">
+                <div class="duration1-badge">2 weeks</div>
+            </div>
+            <div class="card1-content">
+                <span class="category1">Design</span>
+                <h2 class="card1-title">Figma UI UX Design..</h2>
+                <p class="card1-description">Use Figma to get a job in UI Design, User Interface, User Experience design.</p>
+                <div class="card1-rating">
+                    <span>4.3</span>
+                    <span class="stars1">★★★★★</span>
+                </div>
+                <div class="author1-info">
+                    <img src="https://via.placeholder.com/40" alt="Author Image">
+                    <span>Jane Cooper</span>
+                </div>
             </div>
         </div>
-    </body>
-    </html>
-<div class="container1">
-    <!-- Card 1 -->
-    <div class="card1">
-        <div class="card1-image">
-            <img src="./images/Image (1).png" alt="Course Image">
-            <div class="duration1-badge">2 weeks</div>
-        </div>
-        <div class="card1-content">
-            <span class="category1">Design</span>
-            <h2 class="card1-title">Figma UI UX Design..</h2>
-            <p class="card1-description">Use Figma to get a job in UI Design, User Interface, User Experience design.</p>
-            <div class="card1-rating">
-                <span>4.3</span>
-                <span class="stars1">★★★★★</span>
+
+        <!-- Duplicate Card for Card 2 and 3 -->
+        <div class="card1">
+            <div class="card1-image">
+                <img src="./images/Image (2).png" alt="Course Image">
+                <div class="duration1-badge">2 weeks</div>
             </div>
-            <div class="author1-info">
-                <img src="https://via.placeholder.com/40" alt="Author Image">
-                <span>Jane Cooper</span>
+            <div class="card1-content">
+                <span class="category1">Design</span>
+                <h2 class="card1-title">Figma UI UX Design..</h2>
+                <p class="card1-description">Use Figma to get a job in UI Design, User Interface, User Experience design.</p>
+                <div class="card1-rating">
+                    <span>4.3</span>
+                    <span class="stars1">★★★★★</span>
+                </div>
+                <div class="author1-info">
+                    <img src="https://via.placeholder.com/40" alt="Author Image">
+                    <span>Jane Cooper</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card1">
+            <div class="card1-image">
+                <img src="./images/Image (3).png" alt="Course Image">
+                <div class="duration1-badge">2 weeks</div>
+            </div>
+            <div class="card1-content">
+                <span class="category1">Design</span>
+                <h2 class="card1-title">Figma UI UX Design..</h2>
+                <p class="card1-description">Use Figma to get a job in UI Design, User Interface, User Experience design.</p>
+                <div class="card1-rating">
+                    <span>4.3</span>
+                    <span class="stars1">★★★★★</span>
+                </div>
+                <div class="author1-info">
+                    <img src="https://via.placeholder.com/40" alt="Author Image">
+                    <span>Jane Cooper</span>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Duplicate Card for Card 2 and 3 -->
-    <div class="card1">
-        <div class="card1-image">
-            <img src="./images/Image (2).png" alt="Course Image">
-            <div class="duration1-badge">2 weeks</div>
-        </div>
-        <div class="card1-content">
-            <span class="category1">Design</span>
-            <h2 class="card1-title">Figma UI UX Design..</h2>
-            <p class="card1-description">Use Figma to get a job in UI Design, User Interface, User Experience design.</p>
-            <div class="card1-rating">
-                <span>4.3</span>
-                <span class="stars1">★★★★★</span>
-            </div>
-            <div class="author1-info">
-                <img src="https://via.placeholder.com/40" alt="Author Image">
-                <span>Jane Cooper</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="card1">
-        <div class="card1-image">
-            <img src="./images/Image (3).png" alt="Course Image">
-            <div class="duration1-badge">2 weeks</div>
-        </div>
-        <div class="card1-content">
-            <span class="category1">Design</span>
-            <h2 class="card1-title">Figma UI UX Design..</h2>
-            <p class="card1-description">Use Figma to get a job in UI Design, User Interface, User Experience design.</p>
-            <div class="card1-rating">
-                <span>4.3</span>
-                <span class="stars1">★★★★★</span>
-            </div>
-            <div class="author1-info">
-                <img src="https://via.placeholder.com/40" alt="Author Image">
-                <span>Jane Cooper</span>
-            </div>
-        </div>
-    </div>
-</div>
-
+   
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -229,8 +384,11 @@
           </div>
         </div>
       </section>
-      <section class="about-us">
-        <div class="content">
+
+
+    
+    <section class="about-us" data-aos="fade-left">
+        <div class="content" data-aos="fade-left">
             <h1>Who We Are</h1>
             <blockquote>
                 <p>“Empowering Success Through Tailored Learning For A Competitive Edge.”</p>
@@ -240,176 +398,202 @@
             </p>
             <a href="#" class="join-btn">Join Us</a>
         </div>
-
-        <div class="images">
-        <div class="who-image">
+    
+        <div class="images" data-aos="fade-right">
             <img src="./images/Rectangle 13 (2).png" alt="Office Image" class="image-top">
-            </div>
-            <div class="who-image">
             <img src="./images/Rectangle 14 (1).png" alt="Working Hands" class="image-bottom">
-            <!-- <img src="./images/Rectangle 13 (2).png" alt="Working Hands" class="image-bottom"> -->
-        </div></div>
+        </div>
     </section>
+    
+    <section class="features" data-aos="fade-up">
+        <div class="container">
+            <div class="image-container" data-aos="fade-left">
+                <img src="./images/Essential - student (PNG).png" alt="Illustration of a person" class="illustration">
+            </div>
+            <div class="content" data-aos="fade-right">
+                <h3>Features</h3>
+                <h1>We are always working to provide you best of the features in all aspects.</h1>
+                <p class="description">
+                    Our mission is to empower individuals through tailored learning experiences that equip them with the skills and insights needed to thrive in a competitive job market. 
+                    We are committed to fostering an ecosystem where education meets industry demands, enabling a seamless transition from learning to employment.
+                </p>
+                <p class="description">
+                    We envision a future where every individual has access to quality training and career opportunities, regardless of their geographical location. By becoming a global hub 
+                    for professional growth, we aim to redefine how talent is developed and recruited, creating a workforce ready to meet the challenges of tomorrow.
+                </p>
+                <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq-container" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+            <button class="faq-question">What is the difference between a UI and UX Designer?</button>
+            <div class="faq-answer">
+                <p>UI refers to User Interface, focusing on visual design, while UX refers to User Experience, focusing on usability and the user's journey.</p>
+            </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+            <button class="faq-question">How to become a UI designer?</button>
+            <div class="faq-answer">
+                <p>You can become a UI designer by learning design principles, practicing with design tools like Figma, and building a portfolio.</p>
+            </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+            <button class="faq-question">What is the best UI design tool?</button>
+            <div class="faq-answer">
+                <p>Popular UI design tools include Figma, Sketch, and Adobe XD.</p>
+            </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+            <button class="faq-question">What is the best place to learn Figma?</button>
+            <div class="faq-answer">
+                <p>You can learn Figma from resources like the official Figma website, YouTube tutorials, and design courses on platforms like Udemy.</p>
+            </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+            <button class="faq-question">Should designers code?</button>
+            <div class="faq-answer">
+                <p>While not necessary, knowing basic coding (HTML, CSS, JavaScript) can help designers better understand how their designs will be implemented.</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="newsletter-container" data-aos="fade-up">
+        <h2>Newsletter</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget ac quis aliquam arcu lacus.</p>
+        <div class="input-container">
+            <input type="email" placeholder="Your email" required>
+            <button class="subscribe-btn">SUBSCRIBE</button>
+        </div>
+    </div>
+    
+    <footer class="footer" data-aos="fade-up">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="WEEKEND" class="logo-img">
+                    <p class="tagline">Top learning experiences that create more talent in the world.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Solutions</a></li>
+                            <li><a href="#">Tutorials</a></li>
+                            <li><a href="#">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press <span class="new">New</span></a></li>
+                            <li><a href="#">News</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Social</h4>
+                        <ul>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">Dribbble</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Cookies</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bottom Section -->
+            <div class="footer-bottom">
+                <p>© 2022 Ed-Circle. All rights reserved.</p>
+                <div class="footer-social-icons">
+                    <a href="#"><img src="twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="github.png" alt="GitHub"></a>
+                    <a href="#"><img src="dribbble.png" alt="Dribbble"></a>
+                </div>
+            </div>
+        </div>
 
+  <div id="enquiryPopup" class="popup-form">
+        <div class="popup-content">
+            <span class="close-enquiry-btn">&times;</span>
+            <h2>Enquiry Form</h2>
+            <form action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
 
-<section class="features">
-    <div class="container">
-        <div class="image-container">
-            <img src="./images/Essential - student (PNG).png" alt="Illustration of a person" class="illustration">
-        </div>
-        <div class="content">
-            <h3>Features</h3>
-            <h1>We are always working to provide you best of the features in all aspects.</h1>
-            <p class="description">
-                Our mission is to empower individuals through tailored learning experiences that equip them with the skills and insights needed to thrive in a competitive job market. 
-                We are committed to fostering an ecosystem where education meets industry demands, enabling a seamless transition from learning to employment.
-            </p>
-            <p class="description">
-                We envision a future where every individual has access to quality training and career opportunities, regardless of their geographical location. By becoming a global hub 
-                for professional growth, we aim to redefine how talent is developed and recruited, creating a workforce ready to meet the challenges of tomorrow.
-            </p>
-            <a href="#" class="learn-more-btn">Learn More</a>
-        </div>
-    </div>
-</section class="new">
-<section>
-<div class="faq-container">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-        <button class="faq-question">What is the difference between a UI and UX Designer?</button>
-        <div class="faq-answer">
-            <p>UI refers to User Interface, focusing on visual design, while UX refers to User Experience, focusing on usability and the user's journey.</p>
-        </div>
-    </div>
-    <div class="faq-item">
-        <button class="faq-question">How to become a UI designer?</button>
-        <div class="faq-answer">
-            <p>You can become a UI designer by learning design principles, practicing with design tools like Figma, and building a portfolio.</p>
-        </div>
-    </div>
-    <div class="faq-item">
-        <button class="faq-question">What is the best UI design tool?</button>
-        <div class="faq-answer">
-            <p>Popular UI design tools include Figma, Sketch, and Adobe XD.</p>
-        </div>
-    </div>
-    <div class="faq-item">
-        <button class="faq-question">What is the best place to learn Figma?</button>
-        <div class="faq-answer">
-            <p>You can learn Figma from resources like the official Figma website, YouTube tutorials, and design courses on platforms like Udemy.</p>
-        </div>
-    </div>
-    <div class="faq-item">
-        <button class="faq-question">Should designers code?</button>
-        <div class="faq-answer">
-            <p>While not necessary, knowing basic coding (HTML, CSS, JavaScript) can help designers better understand how their designs will be implemented.</p>
-        </div>
-    </div>
-</div>
-</section>
-<div class="newsletter-container">
-    <h2>Newsletter</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget ac quis aliquam arcu lacus.</p>
-    <div class="input-container">
-        <input type="email" placeholder="Your email" required>
-        <button class="subscribe-btn">SUBSCRIBE</button>
-    </div>
-</div>
-
-<footer class="footer">
-    <div class="footer-container">
-      <div class="footer-top">
-        <div class="footer-logo">
-          <img src="logo.png" alt="WEEKEND" class="logo-img">
-          <p class="tagline">Top learning experiences that create more talent in the world.</p>
-        </div>
-        <div class="footer-links">
-          <div class="footer-column">
-            <h4>Product</h4>
-            <ul>
-              <li><a href="#">Overview</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Solutions</a></li>
-              <li><a href="#">Tutorials</a></li>
-              <li><a href="#">Pricing</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Press <span class="new">New</span></a></li>
-              <li><a href="#">News</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>Social</h4>
-            <ul>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">LinkedIn</a></li>
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Dribbble</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="#">Terms</a></li>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Cookies</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Bottom Section -->
-      <div class="footer-bottom">
-        <p>© 2022 Ed-Circle. All rights reserved.</p>
-        <div class="footer-social-icons">
-          <a href="#"><img src="twitter.png" alt="Twitter"></a>
-          <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
-          <a href="#"><img src="facebook.png" alt="Facebook"></a>
-          <a href="#"><img src="github.png" alt="GitHub"></a>
-          <a href="#"><img src="dribbble.png" alt="Dribbble"></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  
-
-  <script>
-    function redirectToLogin() {
-        window.location.href = "login.html";  // Redirect to the login page
-    }
-    // Create the torch and dark effect elements dynamically
-    const torch = document.createElement('div');
-    torch.id = 'torch';
-    document.body.appendChild(torch);
-
-    const darkOverlay = document.createElement('div');
-    darkOverlay.classList.add('dark');
-    document.body.appendChild(darkOverlay);
-
-    // Show the torch when the mouse moves
-    document.addEventListener('mousemove', function (e) {
-        torch.style.display = 'block';
-        torch.style.top = `${e.pageY - 100}px`;
-        torch.style.left = `${e.pageX - 100}px`;
-    });
-
-    // Hide the torch when the mouse leaves the body
-    document.body.addEventListener('mouseleave', function () {
-        torch.style.display = 'none';
-    });
-    document.querySelectorAll('.faq-question').forEach(button => {
-        button.addEventListener('click', () => {
-            const faqItem = button.parentElement;
-            faqItem.classList.toggle('active');
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // duration of animations in milliseconds
+            once: false // whether animation should happen only once
         });
-    });
 
-</script>
+        // Get the popup elements
+        const enquiryPopup = document.getElementById("enquiryPopup");
+        const closeEnquiryBtn = document.querySelector(".close-enquiry-btn");
+
+        // Show the enquiry form when the page loads
+        window.onload = function() {
+            setTimeout(() => {
+                enquiryPopup.style.display = "flex"; // Show the enquiry popup
+            }, 1000); // Delay for 1 second after page load
+        };
+
+        // Close the popup when the 'x' is clicked
+        closeEnquiryBtn.addEventListener("click", function() {
+            enquiryPopup.style.display = "none"; // Hide the enquiry popup
+        });
+
+        // Optional: Open the enquiry form when the "Enquire Now" button is clicked
+        const openEnquiryBtn = document.querySelector(".open-enquiry-btn");
+        openEnquiryBtn.addEventListener("click", function() {
+            enquiryPopup.style.display = "flex";
+        });
+
+        // Close the popup if clicked outside the form
+        window.addEventListener("click", function(event) {
+            if (event.target == enquiryPopup) {
+                enquiryPopup.style.display = "none";
+            }
+        });
+        function showEnquiryForm() {
+            document.getElementById('enquiryPopup').classList.add('active');
+            document.body.classList.add('blur');
+        }
+        
+        // Hide the enquiry form and remove blur effect
+        document.querySelector('.close-enquiry-btn').onclick = function() {
+            document.getElementById('enquiryPopup').classList.remove('active');
+            document.body.classList.remove('blur');
+        };
+    </script>
 </body>
 </html>
