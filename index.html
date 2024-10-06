@@ -16,140 +16,14 @@
             <img src="./images/WhatsApp_Image_2024-09-24_at_16.58.07-removebg-preview.png" style="width: 150px; height:50px; padding:0px">
         </div>
         <ul class="nav-links">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Programs</a></li>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#">FAQ's</a></li>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about-us">About us</a></li>
+            <li><a href="#program">Programs</a></li>
+            <li><a href="#faq">FAQ's</a></li>
             <li><a href="./enquiry.html">Contact Us</a></li>
         </ul>
         <button class="sign-in-btn" onclick="redirectToLogin()">Sign in</button>
     </nav>
-    <style>
-        .popup-form {
-            display: none; /* Initially hidden */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            background: transparent; /* Semi-transparent dark background */
-            justify-content: center;
-            align-items: center;
-            z-index: 1000; /* Higher z-index to appear above other elements */
-        }
-        
-        .popup-form.active {
-            display: flex; /* Show the form when active */
-        }
-        
-        /* Blurred background effect */
-        body.blur {
-            filter: (); /* Apply blur effect to the body */
-            transition: filter 1s ease; /* Smooth transition for blur */
-        }
-        
-        .popup-content {
-            background-color: white; /* White background for the form */
-            border-radius: 8px; /* Rounded corners */
-            padding: 50px; /* Increased padding for a spacious feel */
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
-            max-width: 400px; /* Maximum width of the form */
-            width: 90%; /* Full width on smaller screens */
-            position: relative; /* For positioning close button */
-            background-color: #caf4b7;
-            padding-right: 80px;
-        }
-        
-        .popup-content h2 {
-            margin-bottom: 20px; /* More space below the header */
-            font-size: 28px; /* Larger font size */
-            color: #333; /* Dark color for better readability */
-            text-align: center; /* Centered text */
-        }
-        
-        .popup-content label {
-            font-weight: bold; /* Bold labels for emphasis */
-            margin-bottom: 8px; /* More space below labels */
-            display: block; /* Labels on new lines */
-            margin-right: 20px;
-            color: #555; /* Softer color for labels */
-        }
-        
-        .popup-content input[type="text"],
-        .popup-content input[type="email"],
-        .popup-content textarea {
-            width: 100%; /* Full width inputs */
-            padding: 12px; /* More padding for comfort */
-            margin-bottom: 20px; /* Space below inputs */
-            border: 1px solid #ccc; /* Light border for inputs */
-            border-radius: 4px; /* Slightly rounded corners */
-            font-size: 16px; /* Larger font size for better readability */
-            transition: border-color 0.3s ease; /* Smooth transition for focus effect */
-            margin-right: 20px;
-        }
-        
-        .popup-content input[type="text"]:focus,
-        .popup-content input[type="email"]:focus,
-        .popup-content textarea:focus {
-            border-color: #28a745; /* Green border on focus */
-            outline: none; /* Remove default outline */
-        }
-        
-        .popup-content textarea {
-            resize: none; /* Disable resizing for consistency */
-        }
-        
-        .popup-content button.submit-btn {
-            background-color: #28a745; /* Green background for buttons */
-            color: white; /* White text color */
-            padding: 12px 20px; /* Increased padding for buttons */
-            border: none; /* No border */
-            border-radius: 4px; /* Rounded corners for buttons */
-            cursor: pointer; /* Pointer cursor for interactivity */
-            font-size: 18px; /* Larger font size for buttons */
-            transition: background-color 0.3s ease; /* Smooth transition for hover */
-            width: 100%; /* Full width button */
-            margin-left: 14.5px;
-        }
-        
-        .popup-content button.submit-btn:hover {
-            background-color: #218838; /* Darker green on hover */
-        }
-        
-        .close-enquiry-btn {
-            position: absolute;
-            top: 15px; /* Slightly lower position for aesthetic */
-            right: 20px; /* Spacing from right */
-            font-size: 28px; /* Larger font size for the close button */
-            cursor: pointer;
-            color: #555; /* Softer color for the close button */
-            transition: color 0.3s ease; /* Smooth color transition */
-        }
-        
-        .close-enquiry-btn:hover {
-            color: #ff4d4d; /* Red color on hover for emphasis */
-        }
-    </style>
-    <div id="enquiryPopup" class="popup-form">
-        <div class="popup-content">
-            <span class="close-enquiry-btn">&times;</span>
-            <h2>Enquiry Form</h2>
-            <form action="#" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit" class="submit-btn">Submit</button>
-            </form>
-        </div>
-    </div>
 
     <div class="container">
         <!-- Left content with gradient text and higher z-index -->
@@ -169,7 +43,7 @@
         </div>
     </div>
     
-    <section class="training-section" data-aos="fade-up">
+    <section class="training-section" section id="home" data-aos="fade-up">
         <h2 class="section-title">Our Training Programs</h2>
         <p class="section-subtitle">Fostering a playful & engaging learning environment</p>
         <div class="container11">
@@ -206,7 +80,7 @@
         </div>
     </section>
 
-    <div class="programs-section" data-aos="fade-up">
+    <div class="programs-section" section id="program" data-aos="fade-up">
         <!-- College Programs Card -->
         <div class="program-card1">
             <h2>College Programs</h2>
@@ -387,7 +261,7 @@
 
 
     
-    <section class="about-us" data-aos="fade-left">
+    <section class="about-us" section id="about-us" data-aos="fade-left">
         <div class="content" data-aos="fade-left">
             <h1>Who We Are</h1>
             <blockquote>
@@ -426,7 +300,7 @@
         </div>
     </section>
     
-    <section class="faq-container" data-aos="fade-up">
+    <section class="faq-container" data-aos="fade-up" section id="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
             <button class="faq-question">What is the difference between a UI and UX Designer?</button>
@@ -529,25 +403,6 @@
                 </div>
             </div>
         </div>
-
-  <div id="enquiryPopup" class="popup-form">
-        <div class="popup-content">
-            <span class="close-enquiry-btn">&times;</span>
-            <h2>Enquiry Form</h2>
-            <form action="#" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit" class="submit-btn">Submit</button>
-            </form>
-        </div>
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <script>
