@@ -411,19 +411,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <script>
         function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links10');
-            navLinks.classList.toggle('nav-active');
+    const navbar = document.querySelector('.navbar10');
+    navbar.classList.toggle('active');
+}
 
-            const burger = document.querySelector('.burger10');
-            burger.classList.toggle('toggle');
-        }
-        const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
 
-    burger.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-active');
-        burger.classList.toggle('toggle');
-    });
 
         AOS.init({
             duration: 800, // duration of animations in milliseconds
