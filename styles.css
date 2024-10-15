@@ -21,6 +21,10 @@
     z-index: 1000;
 }
 
+.navbar10{
+    display: none;
+}
+
 .navbar .logo a {
     font-size: 24px;
     font-weight: bold;
@@ -225,9 +229,16 @@ button:nth-child(2) {
         max-width: 100%;
         margin-bottom: 20px;
     }
-.navbar{
-    display: none;
-}
+    .navbar10 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px 20px;
+        position: relative;
+        z-index:10;
+        display: none;
+    }
     .content h1 {
         font-size: 32px;
         padding: 30px;
@@ -296,7 +307,6 @@ button:nth-child(2) {
         background-color: #333;
         flex-direction: column;
         align-items: center;
-        display: none;
         transition: transform 0.5s ease-in;
     }
 
@@ -1767,9 +1777,16 @@ button[type="submit"]:hover {
 
 @media (max-width: 480px) {
     .navbar{
-        width: 460px;
+        display: none;
+    }
+    .navbar10 {
         display: flex;
-        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px 20px;
+        position: relative;
+        z-index:10;
     }
     h1 {
         font-size: 1.5rem; /* Heading size for very small screens */
