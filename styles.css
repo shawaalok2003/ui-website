@@ -225,7 +225,9 @@ button:nth-child(2) {
         max-width: 100%;
         margin-bottom: 20px;
     }
-
+.navbar{
+    display: none;
+}
     .content h1 {
         font-size: 32px;
         padding: 30px;
@@ -248,14 +250,20 @@ button:nth-child(2) {
     }
 }
 
+
 /* Smaller Mobile Phones (max-width: 576px) */
 @media (max-width: 576px) {
     .navbar {
         padding: 10px 20px;
+        display: none;
     }
 
     .nav-links {
         font-size: 14px;
+        display: none;
+    }
+    .nav-container{
+        display: none;
     }
 
     .content h1 {
@@ -277,6 +285,27 @@ button:nth-child(2) {
 
     .image-container img {
         height: auto;
+    }
+}
+@media (max-width: 768px) {
+    .nav-links10 {
+        position: absolute;
+        right: 0;
+        height: 30%;
+        top: 60px;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links10 li {
+        margin: 20px 0;
+    }
+
+    .burger10 {
+        display: none;
     }
 }
 /* Section Styling */

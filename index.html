@@ -43,7 +43,6 @@
                 <li><a href="#faq">FAQ's</a></li>
                 <li><a href="./enquiry.html">Contact Us</a></li>
             </ul>
-            <button class="sign-in-btn">Sign in</button>
         </div>
         <div class="burger">
             <div class="line1"></div>
@@ -51,6 +50,35 @@
             <div class="line3"></div>
         </div>
     </nav>
+    <nav class="navbar" data-aos="fade-down">
+        <div class="logo">
+            <img src="./images/WhatsApp_Image_2024-09-24_at_16.58.07-removebg-preview.png" style="width: 150px; height:50px; padding:0px">
+        </div>
+        <div class="nav-container10">
+            <ul class="nav-links10">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#program">Programs</a></li>
+                <li><a href="#faq">FAQ's</a></li>
+                <li><a href="./enquiry.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="burger10" onclick="toggleMenu()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links10');
+            navLinks.classList.toggle('nav-active');
+
+            const burger = document.querySelector('.burger10');
+            burger.classList.toggle('toggle');
+        }
+    </script>
     
 
     <div class="container">
