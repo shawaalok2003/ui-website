@@ -1886,7 +1886,7 @@ button[type="submit"]:hover {
 
 /* Navigation Links */
 .navbar10 ul li a {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 15px;
     padding: 5px;
