@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <!-- 
+    <!-- Navigation Bar -->
     <nav class="navbar" data-aos="fade-down">
         <div class="logo">
             <img src="./images/WhatsApp_Image_2024-09-24_at_16.58.07-removebg-preview.png" style="width: 150px; height:50px; padding:0px">
@@ -23,33 +23,14 @@
             <li><a href="./enquiry.html">Contact Us</a></li>
         </ul>
         
-        <button class="sign-in-btn">Sign in</button>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav> -->
-
-    <nav class="navbar" data-aos="fade-down">
-        <div class="logo">
-            <img src="./images/WhatsApp_Image_2024-09-24_at_16.58.07-removebg-preview.png" style="width: 150px; height:50px; padding:0px">
-        </div>
-        <div class="nav-container">
-            <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about-us">About us</a></li>
-                <li><a href="#program">Programs</a></li>
-                <li><a href="#faq">FAQ's</a></li>
-                <li><a href="./enquiry.html">Contact Us</a></li>
-            </ul>
-        </div>
+        <button class="sign-in-btn" onclick="redirectToLogin()">Sign in</button>
         <div class="burger">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
         </div>
     </nav>
+<<<<<<< HEAD
     <nav class="navbar10" data-aos="fade-down">
         <div class="logo">
             <img src="./images/WhatsApp_Image_2024-09-24_at_16.58.07-removebg-preview.png" style="width: 150px; height:50px; padding:0px">
@@ -70,6 +51,8 @@
         </div>
     </nav>
     
+=======
+>>>>>>> 7cf659ab7db31e8b2b45a493cccd2091f5a05e5b
 
     <div class="container">
         <!-- Left content with gradient text and higher z-index -->
@@ -141,7 +124,7 @@
             </div>
     
             <!-- Training Center Programs Card -->
-            <div class="program-card siuu">
+            <div class="program-card">
                 <h2>Training Center Programs</h2>
                 <ul>
                     <li>Project Involvement</li>
@@ -430,6 +413,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <script>
+<<<<<<< HEAD
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links10');
             navLinks.classList.toggle('nav-active');
@@ -444,6 +428,8 @@
         navLinks.classList.toggle('nav-active');
         burger.classList.toggle('toggle');
     });
+=======
+>>>>>>> 7cf659ab7db31e8b2b45a493cccd2091f5a05e5b
         AOS.init({
             duration: 800, // duration of animations in milliseconds
             once: false // whether animation should happen only once
@@ -487,6 +473,13 @@
             document.getElementById('enquiryPopup').classList.remove('active');
             document.body.classList.remove('blur');
         };
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
+        
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('toggle');
+            });
 
     </script>
 </body>
