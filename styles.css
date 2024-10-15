@@ -1861,6 +1861,9 @@ button[type="submit"]:hover {
         width: 460px;
         padding-bottom:0%;
     }
+    .siuu{
+        padding-bottom: 20px;
+    }
 }
 
 /* General Styles */
@@ -1955,7 +1958,7 @@ button[type="submit"]:hover {
 
     .navbar10 ul {
         width: 40%;
-        height:400px;
+        height:450px;
         text-align: center;
     }
 
