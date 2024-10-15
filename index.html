@@ -22,7 +22,13 @@
             <li><a href="#faq">FAQ's</a></li>
             <li><a href="./enquiry.html">Contact Us</a></li>
         </ul>
+        
         <button class="sign-in-btn" onclick="redirectToLogin()">Sign in</button>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
     </nav>
 
     <div class="container">
@@ -221,15 +227,6 @@
     </div>
 
    
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer Testimonials</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
     <section class="testimonials-section">
         <h2>What Our Customers Say</h2>
@@ -448,6 +445,14 @@
             document.getElementById('enquiryPopup').classList.remove('active');
             document.body.classList.remove('blur');
         };
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
+        
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('toggle');
+            });
+
     </script>
 </body>
 </html>
