@@ -1737,6 +1737,11 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 480px) {
+    .navbar{
+        width: 460px;
+        display: flex;
+        flex-direction: row;
+    }
     h1 {
         font-size: 1.5rem; /* Heading size for very small screens */
     }
@@ -1759,6 +1764,59 @@ button[type="submit"]:hover {
 
     .buttons button {
         padding: 8px 15px; /* Adjust button size */
-        font-size: 0.9rem; /* Smaller button text */
+        font-size: 0.9rem; /* Smaller button text */
+    }
+    .training-section{
+        margin-bottom: 700px;
+        margin-left: 35px;
+    }
+    .programs-section{
+        margin-bottom: 100px;
+        padding: 5px;
+    }
+    .siuu{
+        margin-bottom: 20px;
+    }
+    .container1{
+        padding: 5px;
+        margin-left: 32px;
+        margin-bottom: 150px;
+    }
+    .testimonials-section{
+        width: 100%;
+        padding: 5px;
+        padding-right: 80px;
+    }
+    .testimonial-wrapper{
+        width: 400px;
+    }
+    .testimonial-container{
+        width: 100%;
+    }
+    .testimonial-card{
+        width: 100%;
+    }
+    .about-us{
+        margin-left: 25px;
+    }
+    .about-us .images{
+        margin-left: 20px;
+    }
+    .features{
+        width: 100%;
+    }
+    .faq-container{
+        width: 100%;
+        padding: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: 20px;
+    }
+    .newsletter-container{
+        width: 75%;
+    }
+    .footer{
+        width: 460px;
+        padding-bottom: 0%;
     }
 }
